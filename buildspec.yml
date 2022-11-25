@@ -1,0 +1,15 @@
+version:0.2
+phases:
+  install:
+     runtime-versions:
+      java: corretto8
+  pre-build:
+    commands:
+    - echo prebuild
+  build:
+    commands:
+    - echo build
+    - mvn package
+    - mvn spring-boot:run
+  post-build:
+    - echo post build
