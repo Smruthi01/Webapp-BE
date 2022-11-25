@@ -1,4 +1,7 @@
 version:0.2
+
+env:
+    git-credential-helper: yes
 phases:
   install:
      runtime-versions:
@@ -6,6 +9,8 @@ phases:
   pre-build:
     commands:
     - echo prebuild
+    - git config credential.https://github.com/Smruthi01 Smruthi01 
+    - git config credential.helper "$helper $options"
   build:
     commands:
     - echo build
