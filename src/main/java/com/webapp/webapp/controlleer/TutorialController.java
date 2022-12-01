@@ -26,7 +26,7 @@ import com.webapp.webapp.repository.TutorialRepository;
 
 // import antlr.collections.List;
 
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "webapp-nlb-4ff1191a6d8a9989.elb.us-east-1.amazonaws.com")
 @RestController
 @RequestMapping("/api")
 
