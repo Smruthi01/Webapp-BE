@@ -10,7 +10,7 @@ public class Webappconfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                 .allowedOrigins("https://webappelevate.devops.coda.run/")        
+                 .allowedOrigins("https://d2alzvhtyozcv5.cloudfront.net/")        
                  .allowedMethods("GET","POST","PUT","DELETE");
     }
     
