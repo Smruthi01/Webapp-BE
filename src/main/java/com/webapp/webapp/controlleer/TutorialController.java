@@ -26,7 +26,7 @@ import com.webapp.webapp.repository.TutorialRepository;
 
 // import antlr.collections.List;
 
-@CrossOrigin(origins = "https://d2alzvhtyozcv5.cloudfront.net")
+@CrossOrigin(origins = "https://d1ee44sv9up6wo.cloudfront.net")
 @RestController
 @RequestMapping("/api")
 
