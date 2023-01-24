@@ -20,13 +20,13 @@ import java.util.Optional;
 import com.webapp.webapp.model.Tutorial;
 import com.webapp.webapp.repository.TutorialRepository;
 
-// import net.bytebuddy.dynamic.DynamicType.Builder.FieldDefinition.Optional;
 
 
 
-// import antlr.collections.List;
 
-@CrossOrigin(origins = "https://d1ee44sv9up6wo.cloudfront.net")
+
+
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 
@@ -35,9 +35,7 @@ public class TutorialController {
     @Autowired
     TutorialRepository tutorialRepository;
   
-//     /**
-//      * @return
-//      */
+
     @GetMapping("/")
 public String test(@RequestParam(required = false) String title){
     return "hiii";
@@ -45,7 +43,7 @@ public String test(@RequestParam(required = false) String title){
 }
 
     
-//works
+
   @GetMapping("/tutorials")
   public ResponseEntity<List<Tutorial>> getAllTutorials(@RequestParam(required = false) String title) {
     try {
@@ -67,7 +65,7 @@ public String test(@RequestParam(required = false) String title){
   }
 
   
-//works
+
   @GetMapping("/tutorials/{id}")
   public ResponseEntity<Tutorial> getTutorialById(@PathVariable("id") long id) {
     Optional<Tutorial> tutorialData = tutorialRepository.findById(id);
@@ -79,7 +77,7 @@ public String test(@RequestParam(required = false) String title){
     }
   }
 
-  //works
+  
   @PostMapping("/tutorials")
   public ResponseEntity<Tutorial> createTutorial(@RequestBody Tutorial tutorial) {
     try {
@@ -91,7 +89,7 @@ public String test(@RequestParam(required = false) String title){
         return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
       }
   }
-//works
+
   @PutMapping("/tutorials/{id}")
   public ResponseEntity<Tutorial> updateTutorial(@PathVariable("id") long id, @RequestBody Tutorial tutorial) {
     Optional<Tutorial> tutorialData = tutorialRepository.findById(id);
