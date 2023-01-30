@@ -13,8 +13,8 @@ import javax.sql.DataSource;
 @Configuration
 public class Dbconfig {
     
-    @Value("${spring.datasource.url}")
-    private String url;
+//     @Value("${spring.datasource.url}")
+//     private String url;
 
     @Autowired
     private SecretManager secretManager;
