@@ -30,10 +30,11 @@ public class Dbconfig {
         if (secret == null)
 
             return null;
-
+        
         return DataSourceBuilder.create()
                 // .driverClassName(driver)
-                .url(url)
+                //.url(url)
+                .url("jdbc:mysql://"+secret.get("host").asText()+"/"+secret.get("dbname").asText()+"?allowPublicKeyRetrieval=true&useSSL=false&enabledTLSProtocols=TLSv1.2&sslMode=DISABLED")
                 .username(secret.get("username").asText())
                 .password(secret.get("password").asText())
                 .build();
